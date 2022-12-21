@@ -13,26 +13,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject _pauseButton;
 
-    void OnMouseUp()
-    {
-        if (isStart)
-        {
-            Application.LoadLevel(1);
-            GetComponent<Renderer>().material.color = Color.cyan;
-            Time.timeScale = 1f;
-        }
-        if (isQuit)
-        {
-            Application.Quit();
-        }
-
-    }
-
-    public void StartGame()
-    {
-        Application.LoadLevel(1);
-    }
-
     public void QuitGame()
     {
         Application.LoadLevel(0);
